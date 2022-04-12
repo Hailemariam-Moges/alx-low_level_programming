@@ -11,15 +11,19 @@
 int main(void)
 {
 	int i = 0;
-	unsigned long int a = 0, b = 1, next;
+	unsigned long int a = 0, b = 1, next = 0;
 
-	for (i = 0; i < 98; i++)
+	while (i < 98)
 	{
 		next = a + b;
 		a = b;
 		b = next;
-		printf("%lu, ", next);
+		printf("%lu", next);
+
+		if (i < 92)
+			printf(", ");
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
