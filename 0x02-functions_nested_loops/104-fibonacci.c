@@ -19,9 +19,6 @@ int main(void)
 		printf("%lu, ", next);
 		a = b;
 		b = next;
-
-		if (i != 98)
-			printf(", ");
 	}
 	printf("\n");
 	return (0);
