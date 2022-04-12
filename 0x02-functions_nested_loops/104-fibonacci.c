@@ -11,7 +11,7 @@ int main(void)
 	int count;
 	unsigned long fb1 = 0, fb2 = 1, sum;
 
-	for (count = 0; count < 92; count++)
+	for (count = 0; count < 98; count++)
 	{
 		sum = fb1 + fb2;
 		printf("%lu, ", sum);
