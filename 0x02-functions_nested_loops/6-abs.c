@@ -11,7 +11,7 @@ int _abs(int n)
 {
 	int retvalue;
 
-	if (n > 0)
+	if (n >= 0)
 	{
 		retvalue = n;
 	}
