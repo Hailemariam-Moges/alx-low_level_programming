@@ -10,10 +10,10 @@
 
 int main(void)
 {
-	int i = 0;
+	int i;
 	unsigned long int a = 0, b = 1, next = 0;
 
-	for (i < 98; i++)
+	for (i = 0; i < 98; i++)
 	{
 		next = a + b;
 		a = b;
