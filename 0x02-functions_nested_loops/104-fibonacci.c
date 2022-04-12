@@ -21,7 +21,7 @@ int main(void)
 		printf("%lu ", next);
 
 		if (i < 98)
-			printf(", ");
+			printf(",");
 	}
 	putchar('\n');
 	return (0);
