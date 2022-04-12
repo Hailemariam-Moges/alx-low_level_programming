@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string.h>
 #include "main.h"
 
 /**
@@ -23,18 +21,4 @@ void print_alphabet_x10(void)
 	}
 	_putchar('\n');
 
-	return (0);
-
-}
-
-/**
- * main - Entry point
- * Return:0
- */
-
-int main(void)
-
-{
-	print_alphabet_x10();
-	
 }
