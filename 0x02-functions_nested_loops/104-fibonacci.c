@@ -18,8 +18,10 @@ int main(void)
 		a = b;
 		b = next;
 		printf("%lu", next);
-		if (i < 97)
+		if (i != 98)
+		{
 			printf(", ");
+		}
 		i++;
 	}
 	putchar('\n');
