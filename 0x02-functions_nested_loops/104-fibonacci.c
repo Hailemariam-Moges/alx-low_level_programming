@@ -20,7 +20,7 @@ int main(void)
 		b = next;
 		printf("%lu", next);
 
-		if (i < 92)
+		if (i < 96)
 			printf(", ");
 		i++;
 	}
