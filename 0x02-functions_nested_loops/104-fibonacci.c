@@ -10,20 +10,20 @@
 
 int main(void)
 {
-    int f1 = 0, f2 = 1, i, next;
+	int i = 0;
+	unsigned long int a = 0, b = 1, next = 0;
 
-    for (i = 1; i <=98; i++)
-    {
-	    printf("%ul", f2);
-	    next = f1 + f2;
-	    f1 = f2;
-	    f2 = next;
+	while (i < 98)
+	{
+		next = a + b;
+		a = b;
+		b = next;
+		printf("%lu", next);
 
-	    if (i != 98)
-	    {
-		    printf(", ");
-	    }
-    }
-    return (0);
-
+		if (i < 97)
+			printf(", ");
+		i++;
+	}
+	putchar('\n');
+	return (0);
 }
