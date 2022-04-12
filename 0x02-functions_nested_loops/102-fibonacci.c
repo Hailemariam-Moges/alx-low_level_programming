@@ -9,22 +9,25 @@
  * Return:0
  */
 
+
 int main(void)
 {
-	long fn = 1;
+	int count;
+	unsigned long f1 = 0, f2 = 1, sum;
 
-	while (fn < 50)
+	for (count = 0; count < 50; count++)
 	{
-		if (fn == 1)
-		{
-			printf("%i\n", fn);
-		}
+		sum = f1 + f2;
+		printf("%lu", sum);
+
+		f1 = f2;
+		f2 = sum;
+
+		if (count == 49)
+			printf("\n");
 		else
-		{
-			fn = fn + 1;
-			printf("%i\n", fn);
-		}
-		fn++;
-		return (fn);
+			printf(", ");
 	}
+
+	return (0);
 }
