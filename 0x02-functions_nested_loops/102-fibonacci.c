@@ -3,13 +3,15 @@
 #include "main.h"
 
 /**
- * printing the first 50 Fibonnanci numbers
+ * main - Prints first 50 Fibonacci numbers, starting with 1 and 2,
+ *        separated by a comma followed by a space.
+ *
  * Return:0
  */
 
 int main(void)
 {
-	fn = 1;
+	long fn = 1;
 
 	while (fn < 50)
 	{
