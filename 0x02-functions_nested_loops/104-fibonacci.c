@@ -16,10 +16,9 @@ int main(void)
 	for (i = 0; i < 98; i++)
 	{
 		next = a + b;
-		//printf("%lu, ", next);
 		a = b;
 		b = next;
-		printf("%lu, ");
+		printf("%lu, ", next);
 	}
 	printf("\n");
 	return (0);
