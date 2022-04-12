@@ -10,19 +10,19 @@
 
 int main(void)
 {
-    int f1 = 0, f2 = 1, i;
+    int f1 = 0, f2 = 1, i, next;
 
     for (i = 1; i <=98; i++)
     {
 	    printf("%ul", f2);
-	    int next;
 	    next = f1 + f2;
 	    f1 = f2;
 	    f2 = next;
 
 	    if (i != 98)
+	    {
 		    printf(", ");
-
+	    }
     }
 
 }
