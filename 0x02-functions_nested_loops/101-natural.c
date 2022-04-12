@@ -1,5 +1,6 @@
 #include <stdlib>
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - main block
@@ -22,6 +23,6 @@ int main(void)
 		n++;
 
 	}
-	printf("%i\n", n);
+	printf("%i\n", sum);
 	return (0);
 }
