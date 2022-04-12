@@ -14,10 +14,13 @@ int main(void)
 
     for (i = 1; i <=98; i++)
     {
-	    printf("%ul", f2, " ");
+	    printf("%ul", f2);
 	    int next = f1 + f2;
 	    f1 = f2;
 	    f2 = next;
+
+	    if (i != 98)
+		    printf(", ");
 
     }
 }
