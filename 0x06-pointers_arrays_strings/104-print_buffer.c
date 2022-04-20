@@ -2,21 +2,18 @@
 #include <stdio.h>
 
 /**
- *
- *  * print_buffer - prints a buffer
- *
- *   * @b: buffer.
- *
- *    * @size: size of buffer.
- *
- *     * Return: no return.
- *
- *      */
+ * print_buffer - prints a buffer
+ * @b: buffer.
+ * @size: size of buffer.
+ * Return: no return.
+ */
 
 void print_buffer(char *b, int size)
 
 {
 	int j, k, l;
+
+
 	if (size <= 0)
 		printf("\n");
 	else
