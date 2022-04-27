@@ -1,40 +1,43 @@
-#include "main.h"
-#include <stdio.h>
-
+#include "holberton.h"
 /**
- * _myStrlen - gets string length
- * @p: string to be counted
- * Return: returns string length
+ * _strlen - return length of string
+ * @str: string to check
+ *
+ * Return: length of str
  */
-char _myStrlen(char *p)
+int _strlen(char *str)
 {
-	if (!*p)
-		return (0);
-	return (1 + _myStrlen(p + 1));
+if (*str == '\0')
+return (0);
+else
+return (1 + _strlen(str + 1));
 }
 /**
- * p1 - string iterator
- * @s: string paramsss
- * @l: length of string param
- * Return: returns string length
+ * check_palindrome - checks to see if a string is a palindrome
+ * @l: left hand index
+ * @r: right hand index
+ * @p: possible palindrome
+ *
+ * Return: 1 if palindrome 0 if not
  */
-int p1(char *s, int l)
+int check_palindrome(int l, int r, char *p)
 {
-	if (l < 1)
-		return (1);
-	if (*s == *(s + l))
-		return (p1(s + 1, l - 2));
-	return (0);
+if (l >= r)
+return (1);
+else if (p[l] != p[r])
+return (0);
+else
+return (check_palindrome(l + 1, r - 1, p));
 }
 /**
- * is_palindrome - checks if a string is palindrome
- * @s: string to be checked
- * Return: 1 or 0 if palindrome or not palindrome respectively
+ * is_palindrome - states if a string is a palindrome
+ * @s: string to check
+ *
+ * Return: 1 if palindrome, 0 if not
  */
 int is_palindrome(char *s)
 {
-	int len;
-
-	len = _myStrlen(s);
-	return (p1(s, len - 1));
+int i;
+i = _strlen(s) - 1;
+return (check_palindrome(0, i, s));
 }
