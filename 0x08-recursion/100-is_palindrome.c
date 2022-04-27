@@ -1,53 +1,39 @@
-#include "holberton.h"
-#include <stdio.h>
-
-int _strlen_recursion(char *s);
-int helper_palindrome(char *s, int len);
+#include "main.h"
 
 /**
- *_strlen_recursion - A function to obtain the length of the string s
- * @s: A string to calculate length
- * Return: the length of string s
+ * _myStrlen - gets string length
+ * @p: string to be counted
+ * Return: returns string length
  */
-int _strlen_recursion(char *s)
+char _myStrlen(char *p)
 {
-	if (!*s)
-	{
+	if (!*p)
 		return (0);
-	}
-	return (_strlen_recursion(s + 1) + 1);
+	return (1 + _myStrlen(p + 1));
 }
-
 /**
- * is_palindrome - A function that checks if s is a palindrome string
- * @s: An inpuit string
- * Return: 1 if is string is a palindrome or 0 in otherwise
+ * p1 - string iterator
+ * @s: string paramsss
+ * @l: length of string param
+ * Return: returns string length
+ */
+int p1(char *s, int l)
+{
+	if (l < 1)
+		return (1);
+	if (*s == *(s + l))
+		return (p1(s + 1, l - 2));
+	return (0);
+}
+/**
+ * is_palindrome - checks if a string is palindrome
+ * @s: string to be checked
+ * Return: 1 or 0 if palindrome or not palindrome respectively
  */
 int is_palindrome(char *s)
 {
 	int len;
 
-	len = _strlen_recursion(s);
-	if (len <= 1)
-		return (1);
-	return (helper_palindrome(s, len));
-}
-
-/**
- * helper_palindrome - A function with a revesed string
- * @s: An input string
- * @len: the length of the string s
- * Return: A reverse string
- */
-int helper_palindrome(char *s, int len)
-{
-	if (len <= 1)
-		return (1);
-	else if (*s == *(s + len - 1))
-	{
-		return (helper_palindrome(s + 1, len - 2));
-	}
-	else
-		return (0);
-
+	len = _myStrlen(s);
+	return (p1(s, len - 1));
 }
