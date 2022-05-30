@@ -1,3 +1,5 @@
+#include "main.h"
+
 int exact_close(int);
 /**
  * main - Main function to copy files
